@@ -95,13 +95,16 @@ body {
 
 .about {
   height: 100vh;
-  background-image: url('img/duotone-1.jpg');
- }
+  background-image: url('img/duotone.jpg');
+  position: relative;
+}
 
 article {
   text-align: left;
   font-size: 24px;
-  padding: 110px 35px 30px 520px;  
+  position: absolute;
+  top: 15%;
+  left: 50%;
 }
 
 article p {
@@ -114,14 +117,27 @@ article p {
   line-height: 36px;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+/* @media (min-width: 1601px) and (max-width: 1920px) {
+
+} */
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .about {
+    background-size: 1600px 1000px;  
+    }
+    article p {
+      font-size: 1.6vw;    
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
 
   .about {
-    height: auto;
-  } 
+    background-size: 1199px 800px;
+    } 
 
   article {
-    padding: 110px 35px 40px 510px;
+    font-size: 1.6vw;
   } 
 }
 
@@ -129,15 +145,16 @@ article p {
 
   .about {
     height: auto;
-    background-image: url('img/duotone-2.jpg');
+    background-size: 991px 700px;
   }
 
   article {
     width: 85vw;
     margin: 0 auto;
-    padding: 150px 40px;
+    padding: 100px 40px;
     text-align: center;
-    font-size: 24px;
+    font-size: 2vw;
+    position: static;
   }
 
   article p {
@@ -150,20 +167,23 @@ article p {
 
   .about {
     height: auto;
-    background-image: url('img/duotone-3.jpg');
+    background-image: unset;
+    background-color: #5BB7A8;
   }
 
   article {
+    position: static;
     width: 90vw;
     margin: 0 auto;
-    padding: 170px 40px 50px 40px;
+    padding: 175px 40px 50px 40px;
     text-align: center;
     font-size: 20px;
   }
 
   article p {
     max-width: 80vw;
-    color: #363837;;
+    color: #d4d6d8;
+    text-shadow: -1px 0 #367c70, 0 1px #367c70, 1px 0 #367c70, 0 -1px #367c70;
   }
 }
 
